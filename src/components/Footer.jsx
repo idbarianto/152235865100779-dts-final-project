@@ -16,13 +16,13 @@ let Footer = () => {
                                 Category
                             </h6>
                             <p className="mb-4">
-                                <a href="#!" className="text-gray-600">Programing</a>
+                                <p className="text-gray-600">Programing</p>
                             </p>
                             <p className="mb-4">
-                                <a href="#!" className="text-gray-600">Mobile</a>
+                                <p className="text-gray-600">Mobile</p>
                             </p>
                             <p className="mb-4">
-                                <a href="#!" className="text-gray-600">Database</a>
+                                <p className="text-gray-600">Database</p>
                             </p>
                         </div>
                         <div>
@@ -30,13 +30,13 @@ let Footer = () => {
                                 Top Article
                             </h6>
                             <p className="mb-4">
-                                <a href="#!" className="text-gray-600">Pricing</a>
+                                <p className="text-gray-600">Pricing</p>
                             </p>
                             <p className="mb-4">
-                                <a href="#!" className="text-gray-600">Settings</a>
+                                <p className="text-gray-600">Settings</p>
                             </p>
                             <p className="mb-4">
-                                <a href="#!" className="text-gray-600">Orders</a>
+                                <p className="text-gray-600">Orders</p>
                             </p>
                         </div>
                         <div>
