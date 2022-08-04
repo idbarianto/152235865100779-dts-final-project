@@ -5,7 +5,6 @@ import React, { useState, useEffect } from "react";
 
 import axios from "axios"
 
-let endPoint = "https://newsapi.org/v2/top-headlines";
 
 let Articles = () => {
 
@@ -19,13 +18,13 @@ let Articles = () => {
                 const fetchDataArticles = async () => {
                     const response = await axios({
                         method: 'get',
-                        url: endPoint,
+                        url: "https://api-dts.herokuapp.com/articles.php",
                         params: {
-                            country: 'id',
-                            apiKey: 'fd8b814d6e26416092c0176203d38606'
+                            token: '3As0grhU1A0-bB7eR1ZObavZtNWW3YXTd8.vrJbviTRaiviOmwBZXeKMPnPDtSuz07wVd47DNKue4k',
                         }
                     });
-                    setArticles(response.data.articles)
+                    console.log(response.data.data)
+                    setArticles(response.data.data)
                 }
                 fetchDataArticles();
             } catch (err) {
