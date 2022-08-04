@@ -1,15 +1,37 @@
+import React, { useEffect } from "react";
+
+
+import Nav from "../components/Nav";
+import CardDetail from "../components/CardDetail";
+import Footer from "../components/Footer";
+
+import { useNavigate } from "react-router-dom";
+import { useAuthState } from 'react-firebase-hooks/auth';
+
+import {
+    auth
+} from '../authentication/firebase'
+
 
 import "tailwindcss/tailwind.css"
 
-import Nav from "../components/Nav";
+let Detail = () => {
+    
+    const navigate = useNavigate();
 
-import CardDetail from "../components/CardDetail";
+    const [user, loading] = useAuthState(auth);
 
-import Footer from "../components/Footer";
+    useEffect(
+        () => {
+            if (loading) {
+                return;
+            }
+            if (!user) {
+                navigate("/login");
+            }
+        }, [loading, user, navigate]
+    )
 
-
-
-let Home = () => {
     return (
         <>
 
@@ -24,4 +46,4 @@ let Home = () => {
 }
 
 
-export default Home;
+export default Detail;
