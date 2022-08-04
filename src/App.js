@@ -3,8 +3,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./containers/Home";
+import Article from "./containers/Article";
 import Detail from "./containers/Detail";
 import Profile from "./containers/Profile";
+
 import Login from "./containers/Login";
 import Register from "./containers/Register";
 
@@ -14,6 +16,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/Article" element={<Article />} />
           <Route path="/detail" element={<Detail />} />
           <Route path="/profile" element={<Profile />} />
 
