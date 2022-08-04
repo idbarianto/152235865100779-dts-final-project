@@ -16,7 +16,6 @@ function App() {
           <Route path="/detail" element={<Detail />} />
         </Routes>
       </BrowserRouter>
-
     </>
   );
 }
